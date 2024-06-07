@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="favicon.ico">
+   <title>Example-8</title>
+</head>
+
+<body>
+   <style>
+      /*https://demo.templatemonster.com/ru/demo/82484.html?_gl=1*1aziej8*_ga*NTM1MjI2NTc4LjE3MDcyMTk2NjE.*_ga_FTPYEGT5LY*MTcxMDc0NzM1Ni43LjEuMTcxMDc0NzY5NS41NC4wLjA*/
+      @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+      body {
+         background-color: #ececec;
+      }
+
+      :root {
+         --mycolor1: #3a4651;
+         --mycolor2: #dda663;
+         --mycolor3: #f7f8f8;
+         --mycolor4: #3b3d42;
+         --mycolor5: #272a3a;
+         --mycolor6: #54565f;
+         --mycolor7: #45525e;
+         --myfont1: "Open Sans", Sans-serif;
+         --myfont2: "Hind", Sans-serif;
+      }
+
+      .main {
+         box-sizing: border-box;
+         max-width: 900px;
+         margin: 0 auto;
+         background-color: #fff;
+         font-family: var(--myfont1);
+         color: var(--mycolor6);
+      }
+
+      a {
+         text-decoration: none;
+         cursor: pointer;
+      }
+
+      * h3,
+      h4 {
+         margin: 0 0 10px 0 !important;
+         font-family: var(--myfont2) !important;
+      }
+
+      * h2 {
+         font-size: 28px !important;
+         line-height: 32px !important;
+         font-weight: 500 !important;
+         margin: 10px 0 !important;
+         color: var(--mycolor5);
+         font-family: var(--myfont2) !important;
+      }
+
+      h3,
+      h4 {
+         font-size: 18px !important;
+      }
+
+      p {
+         font-size: 14px;
+         line-height: 18px;
+         margin: 10px 0 !important;
+         font-family: "Open Sans", Sans-serif;
+         color: var(--mycolor6);
+      }
+
+      ul {
+         padding: 0 !important;
+         margin: 0 !important;
+      }
+
+      ul li {
+         list-style-type: none !important;
+         padding-left: 20px !important;
+         font-size: 14px !important;
+         line-height: 22px !important;
+         padding: 0 !important;
+         margin: 7px 0 !important;
+      }
+
+      ._container {
+         max-width: 900px;
+         margin: 0 auto;
+      }
+
+      /*--------introduction---------*/
+
+      .introduction {
+         padding: 40px;
+         position: relative;
+         z-index: 0;
+         overflow: hidden;
+      }
+
+      .introduction::after {
+         content: '';
+         position: absolute;
+         background: var(--mycolor1) url(img-8/back2.png);
+         background-size: contain;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 40%;
+         z-index: -1;
+      }
+
+      .introduction__container {}
+
+      ._container {}
+
+      .introduction__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+         margin: 0 -10px;
+      }
+
+      .introduction__image {
+         flex: 1 1 45%;
+         margin: 10px;
+      }
+
+      .introduction__image img {
+         width:
+            100%;
+      }
+
+      .introduction__content {
+         flex: 1 1 35%;
+         margin: 10px 10px 10px 30px;
+      }
+
+      .introduction__title {
+         font-size: 32px;
+         line-height: 38px;
+         font-weight: 700 !important;
+         color: var(--mycolor5);
+      }
+
+      .introduction__title span {
+         color: var(--mycolor2);
+         text-decoration: underline;
+      }
+
+      .introduction__list {}
+
+      .introduction__list li {
+         position: relative;
+         padding-left: 15px !important;
+      }
+
+      .introduction__list li::before {
+         position: absolute;
+         content: "+";
+         font-size: 18px;
+         color: var(--mycolor2);
+         font-weight: 900;
+         width: 18px;
+         height: 18px;
+         top: 0;
+         left: 0;
+      }
+
+      .introduction__button_1 {}
+
+      .ho-button {
+         display: inline-block;
+         background-color: var(--mycolor2);
+         padding: 14px 20px;
+         color: #fff !important;
+         font-size: 12px;
+         font-weight: 700 !important;
+         transition: .3s;
+      }
+
+      .ho-button:hover {
+         background-color: var(--mycolor1);
+         transition: .3s;
+      }
+
+      .introduction__button_2 {
+         display: inline-block;
+         border: 1px solid var(--mycolor1);
+         color: var(--mycolor1) !important;
+         padding: 13px 20px 13px 28px;
+         font-size: 12px;
+         font-weight: 700 !important;
+         margin: 10px;
+         position: relative;
+         transition: .3s;
+      }
+
+      .introduction__button_2:hover {
+         background-color: var(--mycolor3);
+         transition: .3s;
+      }
+
+      .introduction__button_2::after {
+         position: absolute;
+         content: '';
+         top: 11px;
+         left: 9px;
+         background: transparent url(img-8/telephone.png) no-repeat;
+         background-size: 18px 18px;
+         width: 18px;
+         height: 18px;
+      }
+
+      @media screen and (max-width: 500px) {
+         .introduction__content {
+            flex: 1 1 100%;
+            margin: 10px 10px 20px 10px;
+         }
+
+         .introduction__body {
+            flex-direction: column-reverse;
+         }
+
+         .introduction {
+            padding: 40px 30px 30px;
+         }
+
+         .introduction::after {
+            content: '';
+            position: absolute;
+            background: var(--mycolor1) url(img-8/back2.png);
+            background-size: contain;
+            top: 85%;
+            left: 0;
+            height: 20%;
+            width: 100%;
+            z-index: -1;
+         }
+
+         .introduction__button_2 {
+            margin: 10px 0;
+         }
+      }
+
+      /*--------about--------*/
+
+      .about {
+         padding: 20px 40px 40px;
+         position: relative;
+         z-index: 0;
+      }
+
+      .about::after {
+         content: '';
+         position: absolute;
+         background: transparent url(img-8/back.png) no-repeat;
+         background-size: cover;
+         top: 0;
+         right: 0;
+         height: 100%;
+         width: 40%;
+         z-index: -1;
+      }
+
+      .about__container {}
+
+      ._container {}
+
+      .about__body {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         align-items: center;
+         margin: 0 -10px;
+      }
+
+      .about__content {
+
+         flex: 1 1 40%;
+      }
+
+      .about__title {
+         margin: 0 !important;
+      }
+
+      .about__information {
+         background-color: var(--mycolor3);
+         padding: 25px;
+         margin: 10px;
+      }
+
+      .about__items {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -10px;
+      }
+
+      .about__item {
+         margin: 10px;
+         flex: 1 1 25%;
+         text-align: center;
+      }
+
+      .about__item p {
+         margin: 5px 0 !important;
+         font-size: 11px;
+      }
+
+      .about__number {
+         font-size: 22px !important;
+         font-weight: 700 !important;
+         color: var(--mycolor2);
+      }
+
+      .about__link {
+         font-size: 12px !important;
+         color: var(--mycolor5) !important;
+         font-weight: 700;
+         transition: .2s;
+      }
+
+      .about__link:hover {
+         color: var(--mycolor2) !important;
+         transition: .2s;
+      }
+
+      .comunication-about {
+         background-color: var(--mycolor3);
+         padding: 25px;
+         margin: 0 10px 10px;
+         display: flex;
+         position: relative;
+         z-index: 0;
+      }
+
+      .comunication-about::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 120px;
+         height: 100%;
+         background: transparent url(img-8/comunication2.png) no-repeat;
+         background-size: cover;
+         z-index: -1;
+      }
+
+      .comunication-about__icon {
+         margin: 0 20px 0 10px;
+      }
+
+      .comunication-about__icon img {
+         width: 52px;
+         height: 52px;
+      }
+
+      .comunication-about__info {}
+
+      .comunication-about__call {
+         font-size: 18px;
+         font-weight: 500;
+      }
+
+      .comunication-about__number {
+         font-size: 22px;
+         font-weight: 700;
+         color: var(--mycolor2) !important;
+      }
+
+      .comunication-about__number a {
+         font-size: 22px;
+         font-weight: 700;
+         color: var(--mycolor2) !important;
+         transition: .3s;
+      }
+
+      .comunication-about__number:hover a {
+         color: var(--mycolor5) !important;
+         transition: .3s;
+      }
+
+      .about__image {
+         margin: 10px;
+         flex: 1 1 40%;
+      }
+
+      .about__image img {
+         width: 100%;
+      }
+
+      @media screen and (max-width: 500px) {
+         .about {
+            padding: 20px 30px 30px;
+
+         }
+
+         .about__content {
+            flex: 1 1 100%;
+         }
+      }
+
+      /*-----services-----*/
+      .services {
+         padding: 40px;
+         background-color: var(--mycolor3);
+      }
+
+      .services__container {}
+
+      ._container {}
+
+      .services__title {
+         text-align: center;
+      }
+
+      .services__body {
+         display: flex;
+         flex-wrap: wrap;
+         margin: 0 -5px;
+         align-items: start;
+      }
+
+      .services__item {
+         margin: 5px;
+         position: relative;
+         flex: 1 1 25%;
+         color: #fff;
+         overflow: hidden;
+      }
+
+      .services__name {
+         color: #fff !important;
+         font-size: 18px !important;
+         font-weight: 600 !important;
+      }
+
+      .services__name-visible {
+         position: absolute;
+         bottom: 20px;
+         left: 20px;
+         margin: 0 !important;
+         transition: .5s ease-in-out;
+      }
+
+      .services__item:hover .services__name-visible {
+         transform: translateY(200%);
+         transition: .5s ease-in-out;
+      }
+
+      .services__image {
+         position: relative;
+         display: flex;
+         z-index: 0;
+      }
+
+      .services__image::after {
+         position: absolute;
+         content: '';
+         z-index: 0;
+         background-color: rgba(0, 0, 0, 0.3);
+         width: 100%;
+         height: 100%;
+      }
+
+      .services__image img {
+         width: 100%;
+         height: 300px;
+         object-fit: cover;
+
+      }
+
+      .services__item:hover .services__hiden {
+         transform: translateY(0);
+         transition: .5s ease-in-out;
+      }
+
+      .services__hiden {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         padding: 20px;
+         background-color: rgba(0, 0, 0, 0.6);
+         transform: translateY(-100%);
+         transition: .5s ease-in-out;
+      }
+
+      .services__name-hiden {}
+
+      .services__list {}
+
+      .services__link {
+         color: #fff !important;
+         font-size: 12px !important;
+         font-weight: 600 !important;
+      }
+
+      .services__link:hover {
+         color: var(--mycolor2) !important;
+      }
+
+      @media screen and (max-width: 500px) {
+         .services {
+            padding: 30px;
+         }
+
+         .services__item {
+            flex: 1 1 100%;
+         }
+      }
+
+      /**/
+      .advantages {
+         background-color: var(--mycolor1);
+         color: #fff;
+         padding: 40px;
+         position: relative;
+         z-index: 0;
+      }
+
+      .advantages::after {
+         content: '';
+         position: absolute;
+         background: url(img-8/back2.png);
+         background-size: contain;
+         top: 0;
+         left: 0;
+         width: 40%;
+         height: 100%;
+         z-index: -1;
+      }
+
+
+      .advantages p {
+         color: #fff;
+      }
+
+      .advantages__container {}
+
+      ._container {}
+
+      .advantages__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+         margin: 0 -10px;
+      }
+
+      .advantages__image {
+         flex: 1 1 45%;
+         margin: 10px;
+         position: relative;
+         z-index: 0;
+      }
+
+
+      .advantages__image img {
+         width: 100%;
+      }
+
+      .advantages__content {
+         flex: 1 1 35%;
+         margin: 10px 10px 10px 30px;
+      }
+
+      .advantages__title {
+         color: #fff !important;
+      }
+
+      .advantages__list {
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      .advantages__list li {
+         flex: 1 1 40%;
+         margin: 5px;
+         position: relative;
+         padding-left: 20px !important;
+         margin: 5px 0 !important;
+      }
+
+      .advantages__list li::before {
+         position: absolute;
+         content: '';
+         background: transparent url(img-8/advantages-mark.png);
+         width: 16px;
+         height: 16px;
+         background-size: 16px 16px;
+         top: 3px;
+         left: 0;
+
+      }
+
+      .advantages__button {
+         border: 1px solid var(--mycolor2);
+         margin: 15px 0;
+      }
+
+      .ho-button {}
+
+      @media screen and (max-width: 500px) {
+         .advantages {
+            padding: 30px;
+         }
+
+         .advantages__content {
+            flex: 1 1 100%;
+            margin: 10px;
+         }
+
+      }
+
+      /*----------delivery---------*/
+
+      .delivery {
+         padding: 40px;
+         position: relative;
+         z-index: 0;
+      }
+
+      .delivery::after {
+         position: absolute;
+         content: '';
+         background: transparent url(img-8/back.png);
+         background-size: cover;
+         z-index: -1;
+         top: 0;
+         right: 0;
+         width: 40%;
+         height: 50%;
+      }
+
+
+      .delivery__container {}
+
+      ._container {}
+
+      .delivery__title {
+         text-align: center;
+      }
+
+      .delivery__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -20px;
+      }
+
+      .delivery__item {
+         flex: 1 1 25%;
+         margin: 20px;
+         display: flex;
+         position: relative;
+         z-index: 0;
+      }
+
+      .delivery__item_1::after {
+         position: absolute;
+         content: '';
+         bottom: 10px;
+         left: calc(100% - 70px);
+         background: transparent url(img-8/delivery-arrow1.png) no-repeat;
+         background-size: cover;
+         width: 1px;
+         height: 50px;
+         z-index: -1;
+         transition: .5s .5s;
+      }
+
+      .delivery:hover .delivery__item_1::after {
+         width: 100px;
+         transition: .5s;
+      }
+
+
+      .delivery__item_2 {
+         padding-top: 70px;
+      }
+
+      .delivery__item_2::after {
+         position: absolute;
+         content: '';
+         top: 0;
+         left: calc(100% - 70px);
+         background: transparent url(img-8/delivery-arrow2.png) no-repeat;
+         background-size: cover;
+         width: 1px;
+         height: 50px;
+         z-index: -1;
+         transition: .5s;
+      }
+
+      .delivery:hover .delivery__item_2::after {
+         width: 100px;
+         transition: .5s .5s;
+      }
+
+      .delivery__condition {
+         font-weight: 500 !important;
+         font-size: 16px !important;
+         line-height: 20px !important;
+         color: var(--mycolor5) !important;
+      }
+
+      .delivery__item p {
+         font-size: 12px !important;
+      }
+
+      .delivery__icon {
+         background-color: #fff;
+         border-radius: 50%;
+         width: 80px;
+         height: 80px;
+         margin-right: 20px;
+         padding: 20px;
+         box-sizing: border-box;
+         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+         transition: .3s;
+      }
+
+      .delivery__item:hover .delivery__icon {
+         box-shadow: rgba(221, 166, 99, 0.3) 0px 7px 29px 0px;
+         transition: .3s;
+      }
+
+      .delivery__icon img {
+         width: 40px;
+         height: 40px;
+      }
+
+      .delivery__info {}
+
+      @media screen and (max-width: 800px) {
+         .delivery__item_2 {
+            padding-top: 0;
+         }
+
+         .delivery__item_2::after {
+            content: none;
+         }
+
+         .delivery__item_1::after {
+            content: none;
+         }
+      }
+
+      @media screen and (max-width: 500px) {
+         .delivery {
+            padding: 30px;
+         }
+      }
+
+      /*---------review---------*/
+
+      .review {
+         padding: 40px;
+         background-color: var(--mycolor3);
+         text-align: center;
+      }
+
+      .review__container {}
+
+      ._container {}
+
+      .review__title {}
+
+      .review__body {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin: 0 -10px;
+         padding-top: 20px;
+      }
+
+      .review__item {
+         flex: 1 1 40%;
+         margin: 10px;
+
+      }
+
+      .review__icon {
+         overflow: hidden;
+         width: 80px;
+         height: 80px;
+         margin: 0 auto;
+         border-radius: 30px;
+      }
+
+      .review__icon img {
+         width: 100%;
+         transition: .3s;
+      }
+
+      .review__item:hover .review__icon img {
+         transform: scale(1.1);
+         transition: .3s;
+      }
+
+      .review__text {
+         font-weight: 300 !important;
+      }
+
+      .review__name {
+         font-size: 18px !important;
+         font-weight: 600 !important;
+      }
+
+      .review__position {
+         font-size: 12px !important;
+      }
+
+      @media screen and (max-width: 500px) {
+         .review {
+            padding: 30px;
+         }
+
+         .review__item {
+            flex: 1 1 100%;
+         }
+      }
+
+      /*----------faq------------*/
+
+      .faq {
+         padding: 40px;
+         text-align: center;
+         background-color: var(--mycolor1);
+         position: relative;
+         z-index: 0;
+      }
+
+      .faq::after {
+         content: '';
+         position: absolute;
+         background: var(--mycolor1) url(img-8/back2.png);
+         background-size: cover;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 40%;
+         z-index: -1;
+      }
+
+      .faq__title {
+         color: #fff !important;
+      }
+
+      .faq-body {
+         margin: 20px -10px 0;
+
+      }
+
+
+      .faq-body-content {
+         text-align: left;
+      }
+
+      summary::-webkit-details-marker {
+         display: none;
+      }
+
+      summary::-moz-list-bullet {
+         list-style-type: none;
+      }
+
+      summary::marker {
+         display: none;
+      }
+
+      summary {
+         padding: 10px 35px 10px 25px;
+         display: block;
+         font-size: 16px;
+         font-weight: 500;
+         cursor: pointer;
+         position: relative;
+         background-color: var(--mycolor7);
+         font-family: var(--myfont2);
+         transition: .3s;
+      }
+
+      summary:before {
+         top: 10px;
+         right: 15px;
+         color: transparent;
+         width: 16px;
+         height: 16px;
+         font-size: 16px;
+         font-weight: 700;
+         content: "+";
+         position: absolute;
+         color: #fff;
+         transition: .5s;
+      }
+
+      details[open]>summary:before {
+         transition: .5s;
+         content: "–";
+      }
+
+      summary~* {
+         padding: 10px 25px 10px;
+      }
+
+      details[open] summary~* {
+         animation: sweep .5s ease-in-out;
+
+      }
+
+      details[open] summary {
+         transition: .3s;
+      }
+
+      @keyframes sweep {
+         0% {
+            opacity: 0;
+         }
+
+         100% {
+            opacity: 1;
+         }
+      }
+
+      summary:focus {
+         outline: 0;
+
+      }
+
+      details {
+         display: block;
+         margin: 10px;
+         color: var(--mycolor3);
+         border: 2px solid #f3f3f3;
+
+      }
+
+      details p {
+         color: #fff !important;
+      }
+
+      @media screen and (max-width: 500px) {
+         .faq {
+            padding: 30px;
+         }
+      }
+   </style>
+   <div class="main">
+      <section class="introduction">
+         <div class="introduction__container _container">
+            <div class="introduction__body">
+               <div class="introduction__image"><img src="img-8/introduction.jpg" alt=""></div>
+               <div class="introduction__content">
+                  <p class="introduction__title">Create a <span>cozy</span> atmosphere in your house with us!</p>
+                  <p>Do you want to make some changes to your property? We would like to hear from you.</p>
+                  <ul class="introduction__list">
+                     <li>High quality services;</li>
+                     <li>Professional team;</li>
+                     <li>Quick services.</li>
+                  </ul>
+                  <a class="introduction__button_1 ho-button" href="">Make an Appointment</a><a
+                     class="introduction__button_2" href="">Request a call</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="about">
+         <div class="about__container _container">
+            <div class="about__body">
+               <div class="about__content">
+                  <div class="about__information">
+                     <h2 class="about__title">Про нас</h2>
+                     <p>We are a well-known repair company and offer high-quality property services. Whether you want a
+                        new
+                        conservatory or are looking for an affordable block paving service for a patio, we are just a
+                        phone
+                        call away.</p>
+                     <p>From planning to execution, you can contact us for all your property requirements.</p>
+                     <div class="about__items">
+                        <div class="about__item">
+                           <div class="about__number">180
+                              +</div>
+                           <p>Over 180 completed objects</p>
+                        </div>
+                        <div class="about__item">
+                           <div class="about__number">250
+                              +</div>
+                           <p>Ready modern objects</p>
+                        </div>
+                        <div class="about__item">
+                           <div class="about__number">
+                              16</div>
+                           <p>16 qualified brigades</p>
+                        </div>
+                     </div>
+                     <a class="about__link" href="">
+                        Read More >></a>
+                  </div>
+                  <div class="about__comunication comunication-about">
+                     <div class="comunication-about__icon"><img src="img-8/comunication.png" alt=""></div>
+                     <div class="comunication-about__info">
+                        <p class="comunication-about__call">Call 24/7</p>
+                        <div class=comunication-about__number><a href="tel:+3809999999">+3809999999</a></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="about__image"><img src="img-8/about.jpg" alt=""></div>
+            </div>
+         </div>
+      </section>
+      <section class="services">
+         <div class="services__container _container">
+            <h2 class="services__title">Що ми пропонуємо</h2>
+            <div class="services__body">
+               <div class="services__item">
+                  <div class="services__image"><img src="img-8/services1.jpg" alt=""></div>
+                  <h3 class="services__name services__name-visible">Floors</h3>
+                  <div class="services__hiden">
+                     <p class="services__name services__name-hiden">Floors</p>
+                     <ul class="services__list">
+                        <li>- Installation;</li>
+                        <li>- Sanding;</li>
+                        <li>- Refinishing;</li>
+                        <li>- Repairs;</li>
+                        <li>- Maintenance;</li>
+                        <li>- Custom design work;</li>
+                     </ul>
+                     <a class="services__link" href="">Read more >></a>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <div class="services__image"><img src="img-8/services2.jpg" alt=""></div>
+                  <h3 class="services__name services__name-visible">Painting works</h3>
+                  <div class="services__hiden">
+                     <p class="services__name services__name-hiden">Painting works</p>
+                     <ul class="services__list">
+                        <li>- Installation;</li>
+                        <li>- Sanding;</li>
+                        <li>- Refinishing;</li>
+                        <li>- Repairs;</li>
+                        <li>- Maintenance;</li>
+                        <li>- Custom design work;</li>
+                     </ul>
+                     <a class="services__link" href="">Read more >></a>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <div class="services__image"><img src="img-8/services3.jpg" alt=""></div>
+                  <h3 class="services__name services__name-visible">Decorative plaster</h3>
+                  <div class="services__hiden">
+                     <p class="services__name services__name-hiden">Decorative plaster</p>
+                     <ul class="services__list">
+                        <li>- Installation;</li>
+                        <li>- Sanding;</li>
+                        <li>- Refinishing;</li>
+                        <li>- Repairs;</li>
+                        <li>- Maintenance;</li>
+                        <li>- Custom design work;</li>
+                     </ul>
+                     <a class="services__link" href="">Read more >></a>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <div class="services__image"><img src="img-8/services4.jpg" alt=""></div>
+                  <h3 class="services__name services__name-visible">Plumbing work</h3>
+                  <div class="services__hiden">
+                     <p class="services__name services__name-hiden">Plumbing work</p>
+                     <ul class="services__list">
+                        <li>- Installation;</li>
+                        <li>- Sanding;</li>
+                        <li>- Refinishing;</li>
+                        <li>- Repairs;</li>
+                        <li>- Maintenance;</li>
+                        <li>- Custom design work;</li>
+                     </ul>
+                     <a class="services__link" href="">Read more >></a>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <div class="services__image"><img src="img-8/services5.jpg" alt=""></div>
+                  <h3 class="services__name services__name-visible">Electric installation work</h3>
+                  <div class="services__hiden">
+                     <p class="services__name services__name-hiden">Electric installation work</p>
+                     <ul class="services__list">
+                        <li>- Installation;</li>
+                        <li>- Sanding;</li>
+                        <li>- Refinishing;</li>
+                        <li>- Repairs;</li>
+                        <li>- Maintenance;</li>
+                        <li>- Custom design work;</li>
+                     </ul>
+                     <a class="services__link" href="">Read more >></a>
+                  </div>
+               </div>
+               <div class="services__item">
+                  <div class="services__image"><img src="img-8/services6.jpg" alt=""></div>
+                  <h3 class="services__name services__name-visible">Cleaning work</h3>
+                  <div class="services__hiden">
+                     <p class="services__name services__name-hiden">Cleaning work</p>
+                     <ul class="services__list">
+                        <li>- Installation;</li>
+                        <li>- Sanding;</li>
+                        <li>- Refinishing;</li>
+                        <li>- Repairs;</li>
+                        <li>- Maintenance;</li>
+                        <li>- Custom design work;</li>
+                     </ul>
+                     <a class="services__link" href="">Read more >></a>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </section>
+      <section class="advantages">
+         <div class="advantages__container _container">
+            <div class="advantages__body">
+               <div class="advantages__image"><img src="img-8/advantages.jpg" alt=""></div>
+               <div class="advantages__content">
+                  <h2 class="advantages__title">
+                     Переваги нашої компанії
+                  </h2>
+                  <p>Tantas volumus scriptorem cu cum, te per oporteat, discere intellegam eos vix no denique luptatum.
+                  </p>
+                  <ul class="advantages__list">
+                     <li>Modern</li>
+
+                     <li>Scandinavian</li>
+                     <li>Minimalism</li>
+                     <li>High tech</li>
+                     <li>
+                        Loft</li>
+                     <li>Provence</li>
+                     <li>Modern</li>
+                     <li>
+                        Classical</li>
+                     <li>Country music</li>
+                     <li>English</li>
+                  </ul>
+                  <a href="" class="advantages__button ho-button">Make an Appointment</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="delivery">
+         <div class="delivery__container _container">
+            <h2 class="delivery__title">Як зробити замовлення?</h2>
+            <div class="delivery__body">
+               <div class="delivery__item delivery__item_1">
+                  <div class="delivery__icon"><img src="img-8/delivery1.png" alt=""></div>
+                  <div class="delivery__info">
+                     <h3 class="delivery__condition">We communicate and coordinate the planning decision</h3>
+                     <p>We meet and you share your wishes and ideas.</p>
+                  </div>
+               </div>
+               <div class="delivery__item delivery__item_2">
+                  <div class="delivery__icon"><img src="img-8/delivery2.png" alt=""></div>
+                  <div class="delivery__info">
+                     <h3 class="delivery__condition">We communicate and coordinate the planning decision</h3>
+                     <p>We meet and you share your wishes and ideas.</p>
+                  </div>
+               </div>
+               <div class="delivery__item delivery__item_3">
+                  <div class="delivery__icon"><img src="img-8/delivery3.png" alt=""></div>
+                  <div class="delivery__info">
+                     <h3 class="delivery__condition">We communicate and coordinate the planning decision</h3>
+                     <p>We meet and you share your wishes and ideas.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="review">
+         <div class="review__container _container">
+            <h2 class="review__title">Відгуки наших клієнтів</h2>
+            <div class="review__body">
+               <div class="review__item">
+                  <div class="review__icon"><img src="img-8/reviews1.jpg" alt=""></div>
+                  <p class="review__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium distinctio
+                     quam repellat aut, illum fugiat!</p>
+                  <p class="review__name">Adam Jhons</p>
+                  <p class="review__position">Customer</p>
+               </div>
+               <div class="review__item">
+                  <div class="review__icon"><img src="img-8/reviews2.jpg" alt=""></div>
+                  <p class="review__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium distinctio
+                     quam repellat aut, illum fugiat!</p>
+                  <p class="review__name">Kate Smit</p>
+                  <p class="review__position">Customer</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="faq">
+         <div class="faq__container _container">
+            <h2 class="faq__title">
+               Відповіді на поширені питання наших клієнтів
+            </h2>
+            <div class="faq-body">
+               <div itemscope itemtype="https://schema.org/FAQPage" class="faq-body-content">
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Non consectetur a erat nam at lectus urna duis?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+                  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                     <summary itemprop="name">Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+
+                     </summary>
+
+                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">
+                           Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                           curabitur
+                           gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+
+
+                        </p>
+                     </div>
+                  </details>
+
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+</body>
+
+</html>
